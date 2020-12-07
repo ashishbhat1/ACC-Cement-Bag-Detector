@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
+<style>
+body{
+  background-image: url('static/background.jpg');
+  background-size: cover;
+  font-family: 'Turret Road', cursive;
+  text-align: center;
+  letter-spacing: 3px;
+  color: black;
+
+}
+img{
+  max-width:800px;
+}
+input[type=file]{
+text-align: center;
+padding:10px;
+background:#ad62aa;
+
+}
+
+</style>
+<script>
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+   <head>
+      <title>Upload</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+      <style>
+      li {
+        display: inline;
+        text-align: center;
+        padding: 14px 16px;
+        font-size: 170%;
+        color: white;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .d1 {
+        background-color: #3b778a;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .c2 {
+        font-family: 'Lobster', cursive;
+        color: #fcba03;
+        font-size: 190%;
+      }
+      input[type="file"] {
+        background-color: #3b778a;
+      }
+      #back{
+        position: absolute;
+        left: 2%
+      }
+      </style>
+   </head>
+
+   <body>
+      <h4 align=center style="background-color: #ad62aa">Upload Your Image</h4>
+      <a href="{{url_for('display_tables')}}"id='back'class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">storage</i></a>
+      <div>
+<div><img id="blah" src="https://via.placeholder.com/800x600.png?text=Please+Upload+Your+Image+Here" alt="your image" />
+</div>
+<div>
+  <form action="http://localhost:5000/uploadImg" method="post" enctype="multipart/form-data">
+<input type='file' name="f1" onchange="readURL(this);" multiple="" />
+<h4 align=center style="background-color: #ad62aa">Enter The Threshold</h4>
+<input type="text" name="thresh" placeholder="Enter a Value betwwen 0 to 1">
+<input type="submit" value="submit">
+</div>
+
+</form>
+      </div>
+
+   </body>
+</html>

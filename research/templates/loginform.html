@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+    /*set border to the form*/
+
+    form {
+        border: 3px solid #f1f1f1;
+    }
+    /*assign full width inputs*/
+
+    input[type=text],
+    input[type=password] {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    /*set a style for the buttons*/
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+    }
+    /* set a hover effect for the button*/
+
+    button:hover {
+        opacity: 0.8;
+    }
+    /*set extra style for the cancel button*/
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+    /*centre the display image inside the container*/
+
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
+    /*set image properties*/
+
+    img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+    /*set padding to the container*/
+
+    .container{
+        padding: 16px;
+        padding-left:20px;
+    }
+
+    .container1{
+        float:right;
+        padding: 16px;
+        width:500px;
+    }
+    /*set the forgot password text*/
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+    .d1 {
+      background-color: #3b778a;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    .c2 {
+      font-family: 'Lobster', cursive;
+      color: #fcba03;
+      font-size: 190%;
+    }
+    li {
+      display: inline;
+      text-align: center;
+      padding: 14px 16px;
+      font-size: 170%;
+      color: white;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    body {
+      background-image: url("static/i20.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    /*set styles for span and cancel button on small screens*/
+
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+</style>
+
+<body style="margin-top: 100px;">
+  <div class="d1">
+    <ul>
+      <li class="c2" style="float:left"><img src="static/isrologo.jpg" height=50 width=70></li>
+      <li style="float:right"><a href="https://www.isro.gov.in/"><img src="static/i1.png" height=40 width=40></img></a></li>
+      <li style="float:right"><a href="https://www.radartutorial.eu/20.airborne/ab07.en.html">Detailed Info</a></li>
+      <li style="float:right"><a href="#">About Us</a></li>
+      </ul>
+  </div>
+  <div class='container1' >
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Step 1 : Adding HTML-->
+    <div style="background-color: #ffffff;">
+    <form action="{{url_for('landing')}}">
+        <div class="imgcontainer" style="background-color: #ffffff;">
+            <img src="static/img1.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container" style="background-color: #ffffff;">
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+            <button type="submit" style="background-color: #3b778a;">Login</button><br>
+            <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+
+    </form>
+  </div>
+    </div>
+</body>
+
+</html>

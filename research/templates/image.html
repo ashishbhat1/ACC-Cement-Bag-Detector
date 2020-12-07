@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
+<style>
+body{
+  background-image: url('static/background.jpg');
+  background-size: cover;
+  font-family: 'Turret Road', cursive;
+  text-align: center;
+  letter-spacing: 3px;
+  color: black;
+
+}
+img{
+  max-width:800px;
+}
+input[type=file]{
+text-align: center;
+padding:10px;
+background:#ad62aa;
+
+}
+
+</style>
+
+
+<head>
+      <title>Upload</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+      <style>
+      li {
+        display: inline;
+        text-align: center;
+        padding: 14px 16px;
+        font-size: 170%;
+        color: white;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .d1 {
+        background-color: #3b778a;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .c2 {
+        font-family: 'Lobster', cursive;
+        color: #fcba03;
+        font-size: 190%;
+      }
+      input[type="file"] {
+        background-color: #3b778a;
+      }
+      #back{
+        position: absolute;
+        left: 2%
+      }
+      #preview img{
+        margin: 10px;
+      }
+      </style>
+
+
+   </head>
+
+   <body>
+      <h4 align=center style="background-color: #ad62aa">Upload Your Image</h4>
+      <a href="{{url_for('display_tables')}}"id='back'class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">storage</i></a>
+      <div>
+
+<div>
+  <form action="http://localhost:5000/uploadImg" method="post" enctype="multipart/form-data" id="myform">
+    <div id="preview"></div>
+    <input id="file-input" type="file" name="f1" multiple>
+<input type="hidden" name="thresh" value=0.05>
+<input type="submit" value="submit">
+</div>
+
+</form>
+      </div>
+   <img src="static/loading.gif" style="display: none;" id="loading_image">
+   </body>
+   <script>
+   function previewImages() {
+
+     var $preview = $('#preview').empty();
+     if (this.files) $.each(this.files, readAndPreview);
+
+     function readAndPreview(i, file) {
+
+       if (!/\.(jpe?g|png|gif)$/i.test(file.name)){
+         return alert(file.name +" is not an image");
+       } // else...
+
+       var reader = new FileReader();
+
+       $(reader).on("load", function() {
+         $preview.append($("<img/>&emsp;", {src:this.result, height:350}));
+       });
+
+       reader.readAsDataURL(file);
+
+     }
+
+   }
+
+   $('#file-input').on("change", previewImages);
+
+   </script>
+   <script>
+   $('#myform').submit(function() {
+    $('#loading_image').show(); // show animation
+    return true; // allow regular form submission
+});
+</script>
+</html>

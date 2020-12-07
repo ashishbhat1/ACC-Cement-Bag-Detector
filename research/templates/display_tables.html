@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Display Tables</title>
+      <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+      <style>
+      body{
+        font-family: 'Turret Road', cursive;
+      }
+      #home{
+        position: absolute;
+        right: 1%;
+      }
+      #back{
+        position: absolute;
+        left: 1%;
+      }
+      </style>
+   </head>
+
+   <body>
+      <div class = "card-panel  purple darken-1 center"><h4><font color=white>DASHBOARD</font></h4>
+        <a href="{{url_for('landing')}}" id='back'class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_back</i></a>
+        <a href="{{url_for('home')}}"id='home'class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">home</i></a>
+
+      </div>
+      <table class="striped centered">
+        <thead>
+          <tr>
+              <th>Timestamp</th>
+              <th>Warehouse Location</th>
+              <th>Stack Number</th>
+              <th>Bag Count</th>
+              <th></th>
+
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for row in data %}
+          <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td><a href={{row[4]}} class=" purple waves-effect waves-light btn">VIEW</a></td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+   </body>
+</html>

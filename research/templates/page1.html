@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+        <title>Welcome</title>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <style>
+        body{
+            background-image: url("static/acc2.jpg");
+            backdrop-filter: alpha(opacity=50);
+            background-size:cover;
+
+        }
+        .welcome{
+            font-family: 'Turret Road', cursive;
+            text-align: center;
+            font-size: 100px;
+            color: whitesmoke;
+        }
+        .run{
+            margin-left: 41%;
+            margin-top: 17%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: whitesmoke;
+            border: 5px solid white;
+            width: 250px;
+            height: 75px;
+            font-family: 'Turret Road', cursive;
+            font-size: x-large;
+
+        }
+        .run:hover{
+            color: black;
+            background-color: whitesmoke;
+        }
+
+    </style>
+
+    <body>
+        <h1 class="welcome">WELCOME</h1>
+        <a href="{{url_for('landing')}}">
+                <button class="run" > Click here to upload images</button>
+        </a>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>

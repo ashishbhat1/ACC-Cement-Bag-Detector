@@ -1,0 +1,134 @@
+<annotation>
+	<folder>newdata</folder>
+	<filename>54.jpg</filename>
+	<path>C:\Users\Tanishqa Shetty\Desktop\acc\newdata\54.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cement bag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2848</xmin>
+			<ymin>59</ymin>
+			<xmax>3833</xmax>
+			<ymax>409</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cement bag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2803</xmin>
+			<ymin>309</ymin>
+			<xmax>3688</xmax>
+			<ymax>654</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cement bag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2733</xmin>
+			<ymin>654</ymin>
+			<xmax>3688</xmax>
+			<ymax>999</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cement bag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2763</xmin>
+			<ymin>929</ymin>
+			<xmax>3698</xmax>
+			<ymax>1299</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cement bag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2808</xmin>
+			<ymin>1299</ymin>
+			<xmax>3698</xmax>
+			<ymax>1644</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cement bag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2808</xmin>
+			<ymin>1644</ymin>
+			<xmax>3733</xmax>
+			<ymax>1924</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cement bag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2938</xmin>
+			<ymin>1924</ymin>
+			<xmax>3733</xmax>
+			<ymax>2169</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cement bag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2938</xmin>
+			<ymin>2169</ymin>
+			<xmax>3663</xmax>
+			<ymax>2534</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cement bag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2868</xmin>
+			<ymin>2534</ymin>
+			<xmax>3663</xmax>
+			<ymax>2669</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cement bag</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2868</xmin>
+			<ymin>2669</ymin>
+			<xmax>3528</xmax>
+			<ymax>2994</ymax>
+		</bndbox>
+	</object>
+</annotation>

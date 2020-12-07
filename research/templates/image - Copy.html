@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" rel="stylesheet">
+<style>
+body{
+  background-image: url('static/background.jpg');
+  background-size: cover;
+  font-family: 'Turret Road', cursive;
+  text-align: center;
+  letter-spacing: 3px;
+  color: black;
+
+}
+img{
+  max-width:800px;
+}
+input[type=file]{
+text-align: center;
+padding:10px;
+background:#ad62aa;
+
+}
+
+</style>
+<script>
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+   <head>
+      <title>Upload</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+      <style>
+      li {
+        display: inline;
+        text-align: center;
+        padding: 14px 16px;
+        font-size: 170%;
+        color: white;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .d1 {
+        background-color: #3b778a;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .c2 {
+        font-family: 'Lobster', cursive;
+        color: #fcba03;
+        font-size: 190%;
+      }
+      input[type="file"] {
+        background-color: #3b778a;
+      }
+      </style>
+   </head>
+
+   <body style="margin-top: 100px;">
+     <div class="d1">
+       <ul>
+         <li class="c2" style="float:left"><img src="static/isrologo.jpg" height=50 width=70></li>
+         <li style="float:right"><a href="https://www.isro.gov.in/"><img src="static/i1.png" height=40 width=40></img></a></li>
+         <li style="float:right"><a href="https://www.radartutorial.eu/20.airborne/ab07.en.html">Detailed Info</a></li>
+         <li style="float:right"><a href="{{url_for('login')}}">Logout</a></li>
+         <li style="float:right"><a href="{{url_for('view')}}">View All Detections</a></li>
+         <li style="text-align: center;"><font color="black" size=7>Upload Your Image</font></li>
+         </ul>
+     </div>
+      <!--div class = "card-panel purple darken-1" id="header"><h4>Upload your image</h4></div-->
+      <!--h4 align=center style="background-color: #ad62aa">Upload Your Image</h4-->
+      <div>
+<div><img id="blah" src="https://via.placeholder.com/800x600.png?text=Please+Upload+Your+Image+Here" alt="your image" />
+</div>
+<div>
+  <form action="http://localhost:5000/uploadImg" method="post" enctype="multipart/form-data">
+<input type='file' name="f1" onchange="readURL(this);" />
+<input type="hidden" name="thresh" value="sar image">
+<input type="submit" value="submit">
+</div>
+
+</form>
+      </div>
+
+   </body>
+</html>
