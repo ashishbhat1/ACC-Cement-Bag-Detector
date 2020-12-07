@@ -21,11 +21,11 @@ Procedure<br/><br/>
 Output
 </p>
 
-![](object_detection/image1/11_output.jpg)
-![](object_detection/image1/32_output.jpg)
-![](object_detection/image1/41_output.jpg)
-![](object_detection/image1/51_output.jpg)
-![](object_detection/image1/61_output.jpg)
+![](research/object_detection/image1/11_output.jpg)
+![](research/object_detection/image1/32_output.jpg)
+![](research/object_detection/image1/41_output.jpg)
+![](research/object_detection/image1/51_output.jpg)
+![](research/object_detection/image1/61_output.jpg)
 
 <p align="center"> 
 GUI of Web Application
