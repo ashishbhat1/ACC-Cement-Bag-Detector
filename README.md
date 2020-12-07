@@ -5,7 +5,7 @@ Frameworks Used - Flask Web Framework<br/>
 Libraries Used - Werkzeug, SQLite, OpenCV, Numpy, Six, Tensorflow, Matplotlib, Pillow<br/>
 Modules Used - OS, Sys, Datetime, Tarfile, Zipfile, Collections, Io, Object Detection, Flask mail<br/>
 
-Procedure<br/><br/>
+Procedure:<br/>
 
 1. Installed TensorFlow Object Detection API.<br/>
 2. Took pictures with different backgrounds and varying lighting conditions.<br/>
