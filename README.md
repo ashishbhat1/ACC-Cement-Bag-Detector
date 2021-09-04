@@ -5,7 +5,7 @@ Frameworks Used - Flask Web Framework<br/>
 Libraries Used - Werkzeug, SQLite, OpenCV, Numpy, Six, Tensorflow, Matplotlib, Pillow<br/>
 Modules Used - OS, Sys, Datetime, Tarfile, Zipfile, Collections, Io, Object Detection, Flask mail<br/>
 
-Procedure<br/><br/>
+Procedure:<br/>
 
 1. Installed TensorFlow Object Detection API.<br/>
 2. Took pictures with different backgrounds and varying lighting conditions.<br/>
@@ -21,11 +21,11 @@ Procedure<br/><br/>
 Output
 </p>
 
-![](object_detection/image1/11_output.jpg)
-![](object_detection/image1/32_output.jpg)
-![](object_detection/image1/41_output.jpg)
-![](object_detection/image1/51_output.jpg)
-![](object_detection/image1/61_output.jpg)
+![](research/object_detection/image1/11_output.jpg)
+![](research/object_detection/image1/32_output.jpg)
+![](research/object_detection/image1/41_output.jpg)
+![](research/object_detection/image1/51_output.jpg)
+![](research/object_detection/image1/61_output.jpg)
 
 <p align="center"> 
 GUI of Web Application
